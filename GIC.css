@@ -1,0 +1,235 @@
+/* General Page Styling */
+body {
+    background-color: #5ba0a0; /* aqua-like */
+    font-family: Arial, sans-serif;
+    color: #fbfcfb99;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url('background.jpeg');
+}
+
+/* Header */
+header {
+    padding: 1px;
+    height: 100px;
+    background-color: #d9fdd9; /* light green */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('header 1.jpeg');
+    background-attachment: fixed;
+}
+
+.logoG{
+    color: #02031fc4;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0 10px;
+    display: inline;
+}
+
+.logoI{
+    color: #02031fc4;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0 40px;
+    display: inline;
+}
+
+.logoC{
+    color: #02031fc4;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0 45px;
+    display: inline;
+}
+
+.tagline {
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: #003e7781;
+    margin: 0 0 10px 0;
+    padding: 0 10px;
+}
+
+nav ul {
+    list-style: none;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #02031fc4;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding-top: 150px; /* account for fixed header */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main section h2 {
+    color: #02031fc4;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bolder;
+}
+
+main p, main li, main address {
+    color: #fbfcfb;
+}
+
+/* Services Section: Convert to Cards */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.service-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 220px;
+    color: #02031fc4;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    backdrop-filter: brightness(0.55);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+    z-index: 0;
+}
+
+.service-card * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h3, .service-card p {
+    margin: 0 0 10px 0;
+}
+
+.service-card button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    color: #02031fc4;
+    background-color: #02031fc4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card button:hover {
+    background-color: rgba(40, 29, 76, 0.95);
+    transform: scale(1.05);
+}
+
+.service-card button:hover {
+    background-color: rgba(40, 29, 76, 0.9);
+}
+
+/* Contact Section */
+address a {
+    color: #02031fc4;
+    text-decoration: none;
+    font-weight: bolder;
+}
+address a:hover {
+    text-decoration: underline;
+}
+
+address {
+    line-height: 1.8rem;
+}
+
+/* Footer */
+footer {
+    background-color: #d9fdd9;
+    text-align: center;
+    padding: 10px;
+    color: #003300;
+}
+.service-card:nth-child(1) {
+    background-image: url('residential.jpeg');
+}
+
+.service-card:nth-child(2) {
+    background-image: url('office.jpeg');
+}
+
+.service-card:nth-child(3) {
+    background-image: url('carpet.jpeg');
+}
+
+.service-card:nth-child(4) {
+    background-image: url('laundry.jpeg');
+}
+
+.service-card:nth-child(5) {
+    background-image: url('windows.jpeg');
+}
+
+.service-card:nth-child(6) {
+    background-image: url('postconstruction.jpeg');
+}
+
+.service-card:nth-child(7) {
+    background-image: url('deepcleaning.jpeg');
+}
+
+.service-card:nth-child(8) {
+    background-image: url('movein.jpeg');
+}
+
+.service-card:nth-child(9) {
+    background-image: url('eco.jpeg');
+}
+
+.service-card:nth-child(10) {
+    background-image: url('events.jpeg');
+}
