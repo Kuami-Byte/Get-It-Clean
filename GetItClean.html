@@ -89,6 +89,21 @@
       </div>
       
     </div>
+
+    <!-- Popup Form -->
+    <div class="popup-overlay" id="popupForm">
+      <div class="popup-box">
+        <h2>Book Service</h2>
+        <p id="serviceName"></p>
+
+        <input type="text" id="userLocation" placeholder="Your Location" />
+        <input type="text" id="userContact" placeholder="Your Contact" />
+        <textarea id="userNote" rows="4" placeholder="Short Note (Optional)"></textarea>
+
+        <button onclick="submitBooking()">Submit</button>
+        <button onclick="closePopup()" style="background:#cc0000;margin-left:10px;">Cancel</button>
+      </div>
+    </div>
   </section>
         <!-- Contact Information Section -->
         <section>
@@ -101,6 +116,30 @@
             </address>
         </section>
     </main>
+    <script>
+function bookService(service) {
+    document.getElementById("serviceName").innerText = "Service: " + service;
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+}
+
+function submitBooking() {
+    let location = document.getElementById("userLocation").value;
+    let contact = document.getElementById("userContact").value;
+    let note = document.getElementById("userNote").value;
+
+    if (!location || !contact) {
+        alert("Please fill in at least your location and contact.");
+        return;
+    }
+
+    alert("Your booking has been submitted! We will contact you shortly.");
+    closePopup();
+}
+</script>
 </body>
 <footer>
     <p>&copy; 2025 Get It Clean. All rights reserved.</p>
