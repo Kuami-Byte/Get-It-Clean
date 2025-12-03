@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get It Clean - Log In</title>
+    <link rel="stylesheet" href="GIC.css">
+</head>
+<body>
+    <header>
+        <h1 class="logoG"><strong>Get</strong></h1>
+        <h1 class="logoI"><strong>It</strong></h1>
+        <h1 class="logoC"><strong>Clean</strong></h1>
+        <p class="tagline"><i>...we're getting it clean for you!!!</i></p>
+        <nav>
+            <ul>
+                <li><a href="GetItClean.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="auth-nav">
+            <ul>
+                <li><a href="GICsignup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <h2>Log In to Your Account</h2>
+            <form action="submit_login.html" method="POST" class="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input 
+                type="password" 
+                id="password" 
+                name="password"
+                minlength="8"
+                maxlength="14"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}$"
+                title="Password must be 8-14 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character."
+                required>
+
+                <button type="submit">Log In</button>
+            </form>
+            <p class="signup-link">OOPS! You're not with us already? <a href="GICsignup.html">Sign Up Here</a></p> 
+        </section>
+    </main>
+</body>
+</html>

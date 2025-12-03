@@ -83,6 +83,12 @@ nav a {
     font-weight: bold;
 }
 
+.auth-nav ul {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 /* Main Content */
 main {
     padding-top: 150px; /* account for fixed header */
@@ -232,4 +238,54 @@ footer {
 
 .service-card:nth-child(10) {
     background-image: url('events.jpeg');
+}
+
+/* Signup and Login Forms */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fbfcfb99;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #02031fc4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: rgba(40, 29, 76, 0.9);
+}
+
+.signup-link, .login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #02031fc4;
+}
+.signup-link a, .login-link a {
+    color: #02031fc4;
+    text-decoration: none;
+    font-weight: bold;
+}
+.signup-link a:hover, .login-link a:hover {
+    text-decoration: underline;
 }
